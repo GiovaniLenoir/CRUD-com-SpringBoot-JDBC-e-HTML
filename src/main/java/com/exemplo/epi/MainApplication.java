@@ -1,4 +1,4 @@
-package java.com.exemplo.epi;
+package src.main.java.com.exemplo.epi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

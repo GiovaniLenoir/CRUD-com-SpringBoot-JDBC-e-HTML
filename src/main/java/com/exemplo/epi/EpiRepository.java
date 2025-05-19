@@ -1,4 +1,4 @@
-package java.com.exemplo.epi;
+package src.main.java.com.exemplo.epi;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

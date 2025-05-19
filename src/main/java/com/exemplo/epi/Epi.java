@@ -1,4 +1,4 @@
-package java.com.exemplo.epi;
+package src.main.java.com.exemplo.epi;
 
 public class Epi {
     private String nome;

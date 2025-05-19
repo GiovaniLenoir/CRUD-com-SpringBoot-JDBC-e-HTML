@@ -1,4 +1,4 @@
-package java.com.exemplo.epi;
+package src.main.java.com.exemplo.epi;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
