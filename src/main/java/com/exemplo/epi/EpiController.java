@@ -1,4 +1,4 @@
-package src.main.java.com.exemplo.epi;
+package com.exemplo.epi;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,7 +9,7 @@ import java.util.List;
 public class EpiController {
 
     @Autowired
-    private EpiRepository epiRepository;
+    private com.exemplo.epi.EpiRepository epiRepository;
 
     @PostMapping("/epis")
     public String salvar(@RequestParam String nome, @RequestParam String validade) {

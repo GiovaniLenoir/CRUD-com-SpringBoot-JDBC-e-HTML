@@ -1,4 +1,4 @@
-package src.main.java.com.exemplo.epi;
+package com.exemplo.epi;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
