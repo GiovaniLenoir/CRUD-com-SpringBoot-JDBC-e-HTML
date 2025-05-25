@@ -1,79 +1,102 @@
 # 🛡️ Sistema de Controle de EPIs
 
-Este é um sistema simples de **cadastro e listagem de EPIs (Equipamentos de Proteção Individual)**, desenvolvido com **Spring Boot**, **JDBC** e **HTML**. O sistema permite registrar EPIs e consultar todos os cadastros via interface web ou em formato JSON.
+Este é um sistema simples para **cadastro e listagem de EPIs (Equipamentos de Proteção Individual)**, desenvolvido com **Spring Boot**, **JDBC** e **HTML**. O projeto utiliza **MySQL** como banco de dados e fornece uma interface básica para interações com o sistema.
 
-## ✨ Funcionalidades
+## 🚀 Funcionalidades
 
-- ✅ Cadastro de EPIs com nome e validade
-- 📋 Listagem dos EPIs cadastrados
-- 🌐 Interface HTML simples para entrada de dados
-- 🧩 Integração com banco de dados MySQL
+- Cadastrar novos EPIs
+- Listar todos os EPIs cadastrados (em JSON)
+- Interface HTML simples para entrada de dados
 
-## 💻 Tecnologias Utilizadas
+## 🗂 Estrutura do Projeto
 
-- Java 17+
+```
+projeto-epi/
+├── pom.xml
+├── src/
+│   ├── main/
+│   │   ├── java/com/exemplo/epi/
+│   │   │   ├── Epi.java
+│   │   │   ├── EpiController.java
+│   │   │   └── EpiRepository.java
+│   │   └── resources/
+│   │       ├── static/epis.html
+│   │       └── application.properties
+```
+
+## 🛠 Tecnologias Utilizadas
+
+- Java 17+ (ou compatível com Spring Boot)
 - Spring Boot
 - Spring JDBC
-- HTML/CSS
 - MySQL
+- HTML/CSS
 - Maven
 
-## 📁 Estrutura do Projeto
+## 📦 Requisitos
 
--projeto-epi/
--├── pom.xml
--├── src/
--│ ├── main/
--│ │ ├── java/com/exemplo/epi/
--│ │ │ ├── Epi.java
--│ │ │ ├── EpiController.java
--│ │ │ └── EpiRepository.java
--│ │ └── resources/
--│ │ ├── static/epis.html
--│ │ └── application.properties
+- Java JDK instalado
+- MySQL Server em execução
+- Maven instalado (ou use o wrapper `./mvnw`)
 
+## 🧑‍💻 Como Executar o Projeto
 
-## ⚙️ Configuração do Banco de Dados
+1. **Clone o projeto ou extraia o `.zip`:**
 
--1. Crie o banco de dados:
+```bash
+unzip projeto-epi-completo.zip
+cd projeto-epi
+```
 
--```sql
--CREATE DATABASE episdb;
--USE episdb;
+2. **Configure o banco de dados MySQL:**
 
--CREATE TABLE epis (
-  -id INT AUTO_INCREMENT PRIMARY KEY,
-  -nome VARCHAR(100) NOT NULL,
-  -validade DATE NOT NULL
--);
+Abra o MySQL e execute:
 
--2. Configure o arquivo application.properties:
+```sql
+CREATE DATABASE episdb;
+USE episdb;
 
--spring.datasource.url=jdbc:mysql://localhost:3306/episdb
--spring.datasource.username=root
--spring.datasource.password=
--spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+CREATE TABLE epis (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100) NOT NULL,
+  validade DATE NOT NULL
+);
+```
 
+3. **Verifique as configurações em** `src/main/resources/application.properties`:
 
-## 🚀 Como Executar
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/episdb
+spring.datasource.username=root
+spring.datasource.password=
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+```
 
--1. Clone o repositório:
+4. **Execute o projeto:**
 
--git clone https://github.com/seu-usuario/nome-do-repo.git
--cd nome-do-repo
+Com Maven instalado:
 
--2. Execute o projeto com Maven:
+```bash
+mvn spring-boot:run
+```
 
--./mvnw spring-boot:run
+Ou com o wrapper:
 
--Ou, se tiver Maven instalado:
+```bash
+./mvnw spring-boot:run
+```
 
--mvn spring-boot:run
+## 🌐 Acessando o Sistema
 
-## 🌐 Acesso
+- **Cadastro de EPI (HTML):** [http://localhost:8080/epis.html](http://localhost:8080/epis.html)
+- **Listagem em JSON:** [http://localhost:8080/epis](http://localhost:8080/epis)
 
-- 📥 Formulário de cadastro: http://localhost:8080/epis.html
-- 📦 Listagem JSON de EPIs: http://localhost:8080/epis
+## 📁 Arquivos Importantes
+
+- `Epi.java`: Classe modelo do EPI
+- `EpiRepository.java`: Acesso ao banco via JdbcTemplate
+- `EpiController.java`: Controlador para rotas HTTP
+- `epis.html`: Formulário para cadastrar novos EPIs
 
 
 
