@@ -4,9 +4,10 @@ Este é um sistema simples para **cadastro e listagem de EPIs (Equipamentos de P
 
 ## 🚀 Funcionalidades
 
-- Cadastrar novos EPIs
-- Listar todos os EPIs cadastrados (em JSON)
-- Interface HTML simples para entrada de dados
+- ✅ Cadastro de EPIs com nome e validade
+- 📋 Listagem dos EPIs cadastrados
+- 🌐 Interface HTML simples para entrada de dados
+- 🧩 Integração com banco de dados MySQL
 
 ## 🗂 Estrutura do Projeto
 
@@ -41,11 +42,11 @@ projeto-epi/
 
 ## 🧑‍💻 Como Executar o Projeto
 
-1. **Clone o projeto ou extraia o `.zip`:**
+1. **Clone o projeto:**
 
 ```bash
-unzip projeto-epi-completo.zip
-cd projeto-epi
+git clone https://github.com/seu-usuario/nome-do-repo.git
+cd nome-do-repo
 ```
 
 2. **Configure o banco de dados MySQL:**
@@ -80,7 +81,7 @@ Com Maven instalado:
 mvn spring-boot:run
 ```
 
-Ou com o wrapper:
+Ou  se tiver Maven instalado:
 
 ```bash
 ./mvnw spring-boot:run
