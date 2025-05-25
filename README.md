@@ -75,16 +75,16 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 
 4. **Execute o projeto:**
 
-Com Maven instalado:
+Execute o projeto com Maven:
 
 ```bash
-mvn spring-boot:run
+./mvnw spring-boot:run
 ```
 
 Ou  se tiver Maven instalado:
 
 ```bash
-./mvnw spring-boot:run
+mvn spring-boot:run
 ```
 
 ## 🌐 Acessando o Sistema
